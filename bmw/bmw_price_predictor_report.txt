@@ -1,0 +1,97 @@
+BMW PRICE PREDICTION USING MACHINE LEARNING
+
+1. Project Overview
+This project predicts the selling price of BMW cars based on features such as model, year, mileage, fuel type, transmission, and engine specifications. The objective is to build a regression model that can estimate the market price of a BMW car accurately.
+
+2. Dataset
+Source: https://www.kaggle.com/datasets/nalisha/bmw-car-sales-and-price-dataset
+Number of rows: 10781
+Number of columns: 9
+
+Features:
+- Model
+- Year
+- Tax
+- mpg
+- Mileage
+- Fuel Type
+- Transmission
+- Engine Size
+
+Target Variable:
+- Price
+
+3. Data Preprocessing
+- Removed missing values using SimpleImputer.
+- Encoded categorical features using OneHotEncoder.
+- Used ColumnTransformer to preprocess numerical and categorical columns.
+- Built a preprocessing pipeline using Scikit-learn.
+
+4. Models Trained
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+- Neural Network 
+
+5. Model Evaluation
+For each model we calculated:
+- MAE
+- RMSE
+- R2 Score
+
+Example:
+
+Linear Regression
+MAE: 2773.0695441919306
+RMSE: 4154.470400449565
+
+Decision Tree
+MAE: 1846.3541069602347
+RMSE: 3147.2475959475305
+R2 Score: 0.8869603779141675
+
+Random Forest
+MAE: 1540.3944626828415
+RMSE: 2624.3883830778263
+R2 Score: 0.9444480738037878
+
+Neural Network:
+MAE: 1890.5988415261359
+RMSE: 1890.5988415261359
+R2 Score: 0.9206500053405762
+
+6. Best Performing Model
+After comparing the metrics of all the models it is evident that the Random Forest Model is best permorming model 
+with r2 score of 94.5% leavig even the neural network behind. This made it worthy to be the final model for deployment.
+
+7. Technologies Used
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Joblib
+
+8. Project Workflow
+Data Collection
+|
+Data Cleaning
+|
+Feature Engineering
+|
+Preprocessing Pipeline
+|
+Model Training
+|
+Model Evaluation
+|
+Model Saving
+
+9. Future Improvements
+- Collect more recent BMW data.
+- Add more vehicle specifications.
+- Tune hyperparameters using GridSearchCV.
+- Deploy the model using Gradio or Flask.
+- Compare with XGBoost/CatBoost.
+
+10. Conclusion
